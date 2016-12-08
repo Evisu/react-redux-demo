@@ -1,7 +1,20 @@
-import 'core-js/fn/object/assign';
-import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/Main';
+import React from 'react';
+import configureStore from './redux/configureStore';
+import { Provider } from 'react-redux';
+import { syncHistoryWithStore } from 'react-router-redux';
+import { browserHistory } from 'react-router';
+import routes from './routes';
+import DevTools from './redux/DevTools';
 
-// Render the main component into the dom
-ReactDOM.render(<App />, document.getElementById('app'));
+const store = configureStore();
+const history = syncHistoryWithStore(browserHistory, store);
+
+ReactDOM.render((
+  <Provider store={store}>
+    <div>
+      {routes(history)}
+      <DevTools />
+    </div>
+  </Provider>
+), document.getElementById('app'));

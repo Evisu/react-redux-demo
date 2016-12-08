@@ -19,6 +19,7 @@ module.exports = {
     filename: 'app.js',
     publicPath: defaultSettings.publicPath
   },
+  // webpack-dev-server 参数配置
   devServer: {
     contentBase: './src/',
     historyApiFallback: true,
@@ -35,6 +36,9 @@ module.exports = {
       sources: `${defaultSettings.srcPath}/sources/`,
       stores: `${defaultSettings.srcPath}/stores/`,
       styles: `${defaultSettings.srcPath}/styles/`,
+      views: `${defaultSettings.srcPath}/views/`,
+      routes: `${defaultSettings.srcPath}/routes/`,
+      layouts: `${defaultSettings.srcPath}/layouts/`,
       config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV,
       'react/lib/ReactMount': 'react-dom/lib/ReactMount'
     }
