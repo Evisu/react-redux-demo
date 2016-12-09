@@ -7,6 +7,8 @@ import { browserHistory } from 'react-router';
 import routes from './routes';
 import DevTools from './redux/DevTools';
 
+// React Router 与 Redux Store绑定
+
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 

@@ -6,7 +6,8 @@ import { push } from 'react-router-redux';
 
 @connect(state => {
   return {
-    articleList: state.home.list.articleList,
+    // 此处不明白 ？
+    articleList: state.home.list.articleList
   };
 }, {
   push,

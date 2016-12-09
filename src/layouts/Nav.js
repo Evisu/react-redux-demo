@@ -1,13 +1,12 @@
-import React,{Component}  from "react";
-import {Link}  from "react-router";
+import React from 'react';
+import { Link } from 'react-router';
 
-class Nav extends Component{
-  render(){
+class Nav extends React.Component {
+  render() {
     return (
       <nav>
         <Link to="/">Home</Link>
       </nav>
-
     );
   }
 }

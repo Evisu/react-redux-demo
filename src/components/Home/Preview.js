@@ -4,7 +4,7 @@ class Preview extends React.Component {
   static propTypes = {
     title: React.PropTypes.string,
     link: React.PropTypes.string,
-    push: React.PropTypes.func,
+    push: React.PropTypes.func
   };
 
   handleNavigate(id, e) {
@@ -12,6 +12,7 @@ class Preview extends React.Component {
     e.preventDefault();
 
     // 使用 react-router-redux 提供的方法跳转，以便更新对应的 store
+
     this.props.push(`/detail/${id}`);
   }
 

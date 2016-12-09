@@ -1,17 +1,16 @@
-import React, {Component} from "react";
-import Nav  from "./Nav";
+import React from 'react';
+import Nav from './Nav';
 
-class Frame extends Component{
-  render(){
+class Frame extends React.Component {
+  render() {
     return (
-
       <div className="frame">
-        <section className="header">
+        <div className="header">
           <Nav />
-        </section>
-        <section className="container">
+        </div>
+        <div className="container">
           {this.props.children}
-        </section>
+        </div>
       </div>
     );
   }

@@ -7,10 +7,11 @@ class PreviewList extends React.Component {
     error: React.PropTypes.bool,
     articleList: React.PropTypes.arrayOf(React.PropTypes.object),
     loadArticles: React.PropTypes.func,
-    push: React.PropTypes.func,
+    push: React.PropTypes.func
   };
 
   componentDidMount() {
+    // 加载文章列表
     this.props.loadArticles();
   }
 
@@ -27,9 +28,11 @@ class PreviewList extends React.Component {
 
     return (
       <div>
-        {articleList.map(item => {
-          return <Preview {...item} key={item.id} push={this.props.push} />
-        })}
+        {
+          articleList.map(item => {
+            return <Preview {...item} key={item.id} push={this.props.push} />
+          })
+        }
       </div>
     );
   }
