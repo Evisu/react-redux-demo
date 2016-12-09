@@ -12,7 +12,11 @@ class PreviewList extends React.Component {
 
   componentDidMount() {
     // 加载文章列表
-    this.props.loadArticles();
+    let self = this;
+    setTimeout(function() {
+      self.props.loadArticles();
+    }, 2000);
+
   }
 
   render() {

@@ -34,7 +34,7 @@ const finalCreateStore = compose(
 // routerReducer实现了路由状态与Redux Store统一
 const reducer = combineReducers({
   ...rootReducer,
-  routing: routerReducer,
+  routing: routerReducer
 });
 
 export default function configureStore(initialState) {
