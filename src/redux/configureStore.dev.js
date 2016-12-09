@@ -27,6 +27,7 @@ const finalCreateStore = compose(
     // 实现分发action的方法完成Redux应用的路由更新
     routerMiddleware(browserHistory)
   ),
+  // 启动Redux DevTools
   DevTools.instrument()
 )(createStore);
 

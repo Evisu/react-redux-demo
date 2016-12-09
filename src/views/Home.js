@@ -13,6 +13,7 @@ import { push } from 'react-router-redux';
   push,
   ...actions,
 })
+
 class Home extends React.Component {
   render() {
     const { loadArticles, articleList, push } = this.props;
